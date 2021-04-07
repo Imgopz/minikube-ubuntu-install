@@ -1,3 +1,5 @@
+#need docker as runtime environment - installing docker
+
 apt update -y
 
 apt install apt-transport-https ca-certificates curl software-properties-common -y
@@ -20,6 +22,8 @@ systemctl start docker
 
 sleep 5
 
+# Insalling minikube
+
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
  
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
@@ -28,6 +32,7 @@ minikube start --driver=docker
 
 #minikube config set driver docker
 
+# Installing kubectl as CLI
 curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
 
 chmod +x ./kubectl
