@@ -39,3 +39,5 @@ chmod +x ./kubectl
 
 sudo mv ./kubectl /usr/local/bin/kubectl
 
+# kubectl create deployment nginx-depl --image=nginx - to create deployment
+# KUBE_EDITOR="nano" kubectl edit deployment nginx-depl - to modify deployment
