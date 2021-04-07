@@ -1,24 +1,21 @@
 apiVersion: apps/v1
-kind: Deployment #Service for service yml file
+kind: Deployment
 metadata:
-  name: my-app
+  name: nginx-deployment
   labels: #selector key is used instead of lable - it connects to the deployment created with same lable value - for ex: nginx
-    app: my-app
+    app: nginx
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my-app
+      app: nginx
   template:
     metadata:
       labels:
-        app: my-app
+        app: nginx
     spec:
       containers:
-        - name: my-app
-          image: my-image
-          env:
-            - name: SOME_ENV
-              value: $SOME_ENV
+        - name: nginx
+          image: nginx:1.16
           ports:
-            - containerPort: 8080
+            - containerPort: 80
