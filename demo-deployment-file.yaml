@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment #Service for service yml file
 metadata:
   name: my-app
-  labels:
+  labels: #/selectors incase of service file in order to apply service config to the created deployment
     app: my-app
 spec:
   replicas: 2
