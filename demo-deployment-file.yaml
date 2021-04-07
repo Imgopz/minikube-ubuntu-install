@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment #Service for service yml file
 metadata:
   name: my-app
-  labels: #/selectors incase of service file in order to apply service config to the created deployment
+  labels: #selector key is used instead of lable - it connects to the deployment created with same lable value - for ex: nginx
     app: my-app
 spec:
   replicas: 2
