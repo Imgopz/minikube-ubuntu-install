@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Deployment #Service for service yml file
 metadata:
   name: my-app
   labels:
