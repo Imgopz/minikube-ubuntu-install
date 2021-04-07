@@ -64,7 +64,7 @@ kubectl exec -ti mongo-depl-5fd6b7d4b4-pxl2f -- bin/bash
 kubectl delete deployment mongo-depl  
 kubectl delete deployment nginx-depl  
 kubectl apply -f nginx-deployment.yaml  
-kuebctl delete deployment nginx-deployment  
+kubectl delete deployment nginx-deployment  
 kubectl apply -f nginx-deployment.yaml  
 kubectl apply -f nginx-service.yml  
 kubectl describe service nginx-service  
